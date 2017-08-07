@@ -1,18 +1,19 @@
-# Bloggin'
+---
+layout: post
+title: Necrodoro - A Satanic (React/Redux) Pomodoro Technique Timer
+---
 
-So here I am, writing a blog post. Here we go. ALRIGHT.
-
-## What It's All About
+# What It's All About
 
 I made this thing. It's a timer for the pomodoro technique, but with some occult stuff thrown in on top. I originally intended for the narrative element to be more interactive, but it didn't really work out. I'll get into that a little bit later.
 
-## Some Good Things
+# Some Good Things
 
 It uses React, Redux, styled-components, webpack, babel. To date, this is probably the best React app I've written, even if I'm sure to look back at it in a few months and hate the code. But I can at least say I had an idea, and I built the damn thing.
 
 I also had a great time doing the pixel art. I have to remember to keep practicing making visuals, because I really like doing it.
 
-## Some Bad Things
+# Some Bad Things
 
 Redux, man. What the fuck. Right off the bat, I thought it would be a good idea to separate chunks of the app by their reducers. So the timer would have its reducer, the message box would have a reducer, et cetera.
 
@@ -20,7 +21,7 @@ But it got a little hairy when I wanted to use a piece of the timer's state in t
 
 Kind of made me think, why am I even splitting this up into different reducers? Wouldn't it have been easier if I started with one big fat reducer and then considered breaking it up later?
 
-## Lessons For the Future
+# Lessons For the Future
 
 I've really got to get it in my head that software needs to be designed before it's developed. I've got this bad habit of just jumping into code right away and trying to hack my way out. And it doesn't work! Ultimately, I was unable to achieve my original goal of something akin to interactive fiction, with a tree-like narrative structure.
 
