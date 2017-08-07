@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: caleb cox blogging USA
 baseurl: "/blog" # the subpath of your site, e.g. /blog
+description: "This is the blog that belongs to Caleb Cox, the web developer. It's a very serious publication."
 url: "http://calebcox.space" # the base hostname & protocol for your site
 twitter_username: claebocx
 github_username:  calebcox725
