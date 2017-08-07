@@ -25,4 +25,4 @@ github_username:  calebcox725
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: hacker
