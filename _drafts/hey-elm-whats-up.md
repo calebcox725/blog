@@ -16,12 +16,6 @@ WE'LL SEE.
 My first Elm error (from the repl):
 
 ```
-> 1/2
-0.5 : Float
-> 4
-4 : number
-> 4.0
-4 : Float
 > 'taco'
 -- SYNTAX PROBLEM -------------------------------------------- repl-temp-000.elm
 
@@ -31,10 +25,6 @@ and you should be all set!
 3|   'taco'
           ^
 Maybe <http://elm-lang.org/docs/syntax> can help you figure it out.
-
-
-> "taco"
-"taco" : String
 ```
 
 They weren't kidding when they said the error messages were helpful!
@@ -78,3 +68,74 @@ Alright, but why not use an object (or as Elm calls it, a record).
 What are tuples doing that is special?
 
 ---
+
+I'm already getting used to the structure of this code. Reminds me of what little Python I've been exposed to.
+
+Kind of crazy that indentation alone is enough to signify a block, but I think the anxiety this provokes in me is based on how powerful this feels.
+
+---
+
+Maybe the craziest thing I've seen so far is the this:
+
+```
+> divide x y = x / y
+<function> : Float -> Float -> Float
+```
+
+is the same as:
+
+```
+> divide = \x -> (\y -> x / y)
+<function> : Float -> Float -> Float
+```
+
+It's that chain of `Float`s that is so perplexing. It's not that it reads like "Here's a bunch of arguments, and the last thing is the output."
+
+There's this idea here that each argument is sort of adding this layer of scope. Anonymous functions within anonymous functions.
+
+Translates to:
+
+```javascript
+const divide = function(x) {
+  return function(y) {
+    return x / y;
+  };
+}
+
+divide(3)(2);
+// returns 1.5
+```
+
+This is functional programming!!!
+
+---
+
+Union types
+
+Immediately reminds me of `action.type` from Redux. Perhaps because of its use in `case` expression.
+
+I like this a lot because the way I'd deal with it in Redux is a constant like:
+
+```Javascript
+// in the action creator:
+const SET_TIMER = 'SET_TIMER';
+
+function setTimer() {
+  return {
+    type: SET_TIMER,
+    ...
+  };
+}
+
+// and then in the reducer...
+
+import { SET_TIMER } from '../actions/timer';
+
+switch (action.type) {
+  case SET_TIMER: {
+    ...
+  }
+}
+```
+
+This is something I don't like doing!
